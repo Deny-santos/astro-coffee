@@ -1,0 +1,5 @@
+export {default as Home} from "./Home/Home"
+export {default as Photos} from "./Photos/Photos"
+export {default as Psd} from "./Psd/Psd"
+export {default as Vectors} from "./Vectors/Vectors"
+export {default as Videos} from "./Videos/Videos"

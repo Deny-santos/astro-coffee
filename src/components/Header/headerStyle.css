@@ -1,0 +1,60 @@
+header {
+    background: black;
+    padding: 1rem 4rem;
+}
+
+svg {
+    color: rgb(238, 81, 20);
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content > div {
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 0 1rem;
+}
+li {
+    color: white;
+    font-weight: bolder;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: .4rem 1.5rem;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: .4s;
+    border-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: .4rem .5rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: .4s;
+}
+a:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.952);
+}
