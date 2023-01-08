@@ -1,0 +1,128 @@
+header {
+    background: rgba(0, 0, 0, 0.397);
+    padding: 1rem 4rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    height: 90px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 0 20px black;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__bars-div{
+        display: none;
+        svg{
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }  
+    }
+
+    @media screen and (max-width:900px) {
+        .header__bars-div{
+            display: block;
+            z-index: 3;
+        }
+        button {
+            display: none !important;
+        }
+    }
+}
+
+.logo {
+    color: rgba(0,212,255,1);
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.header__wrapp {
+    display: flex;
+    align-items: center;
+
+    nav {
+
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 0 1rem; 
+        
+            li{
+                div {
+                    height: 2px;
+                    width: 0px;
+                    margin-left: 5%;
+                    background-color: white;
+                    transition: .5s;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: .4rem .5rem;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    border-radius: 10px;
+                    transition: .4s;
+                    font-weight: 400;
+                    
+                    &:hover {
+                        color: white;
+                    }
+                }
+                
+                &:hover{
+                    div {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        ul {
+            padding: 0;
+            position: absolute;
+            background-color: rgba(90, 89, 89, 0.932);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height:100vh;
+            width: 100%;
+            top: 0px;
+            right: -100vw;
+            transition: all .6s;
+            z-index: 2;
+
+            li {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+ul.active{
+    right: 0;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: .4rem 1.5rem;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: .4s;
+    border-color: black;
+}
+
+
+

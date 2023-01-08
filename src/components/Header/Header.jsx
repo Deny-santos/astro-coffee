@@ -1,40 +1,58 @@
-import React from 'react'
-import { GiWolverineClaws } from "react-icons/gi"
+import React, {useState} from 'react'
+import { GiGalaxy } from "react-icons/gi"
 import { Link } from 'react-router-dom'
-// import { Navbar, Container, NavbarBrand, Nav,  } from "react-bootstrap"
-import "./headerStyle.css"
+import "./headerStyle.scss"
+import { MdClose } from "react-icons/md"
+import { FaBars } from "react-icons/fa"
+
+
+
 
 const Header = () => {
+
+    const [menuBarActive, setMenuBarActive] = useState(false)
+    const handleActiveBar = () => {
+        if(menuBarActive){
+            setMenuBarActive(false)
+        } else {
+            setMenuBarActive(true)
+        }
+    }
+    
   return (
     <header>
-        {/* <Navbar className='bg-dark d-flex'>
-            <Container className='bg-light w-25'>
-                <NavbarBrand>
-                    <GiWolverineClaws className='text-danger logo font-size-25 bg-dark'/>
-                </NavbarBrand>
-                <Nav.Item>
-                    <Nav.Link href='pages/Vectors/Vectors'>Vectors</Nav.Link>
-                </Nav.Item>
-                
-            </Container>
-        </Navbar> */}
-
-
         <div className='content'>
-            <div>
+            <div className='header__wrapp'>
                 <Link to="/">
-                    <GiWolverineClaws />
+                    <GiGalaxy className='logo'/>
                 </Link>
                 <nav>
-                    <ul>
-                        <li><Link to="/vectors">Vector</Link></li>
-                        <li><Link to="/photos">Phothos</Link></li>
-                        <li><Link to="/psd">Psd</Link></li>
-                        <li><Link to="/videos">Videos</Link></li>
+                    <ul className={menuBarActive? "active": ""}>
+                        <li>
+                            <div className='line'></div>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <div className='line'></div>
+                            <Link to="/blackHoles">Buracos Negros</Link>
+                        </li>
+                        <li>
+                            <div className='line'></div>
+                            <Link to="/planetas">Planetas</Link>
+                        </li>
+                        <li>
+                            <div className='line'></div>
+                            <Link to="/galaxias">Galaxias</Link>
+                        </li>
+                        <li>
+                            <div className='line'></div>
+                            <Link to="/historia">Historia</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <button>+Submit</button>
+            <div className='header__bars-div' onClick={handleActiveBar}>{!menuBarActive ? <FaBars/> : <MdClose/>}</div>
         </div>
     </header>
   )

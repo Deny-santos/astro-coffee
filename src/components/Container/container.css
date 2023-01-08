@@ -1,0 +1,19 @@
+video {
+    display: block;
+    margin-right: 300px;
+}
+.app__container{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto auto;
+}
+.app__container2 {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto auto;   
+    position: relative;
+}

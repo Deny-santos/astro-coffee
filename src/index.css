@@ -1,9 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
 body {
     background-color: rgba(0, 0, 0, 0.801);
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    max-height: max-content;
 }
 
 .logo{
     font-size: 75px;
     cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
