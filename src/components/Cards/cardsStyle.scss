@@ -7,7 +7,7 @@
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     display: flex;
     flex-direction: column;
-    padding: 1px 1rem;
+    padding: 2px 1rem 4rem 1rem;
 }
 .cards__container-title{
     text-align: center;
@@ -112,6 +112,7 @@
 }
 
 .cards-item{
+    
     width: 30%;
     max-width: 50%;
     height: 80%;
@@ -143,4 +144,66 @@
         margin: 1rem;
         color: white;
     }
+    button {
+        color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 1px;
+    max-width: 300px;
+    padding: .8rem 3rem;
+    background-color: rgba(0,212,255,1);
+    border-radius: 10px;
+    border: 1px solid rgba(0,212,255,1);
+    transition: all .5s;
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        background-color: transparent;
+    }
+    }
+}
+
+.faded{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    width: 100vw;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+.myModal {
+    opacity: 0;
+    z-index: 20;
+    background-color: white;
+    height: 70%;
+    width: 50%;
+    position: fixed;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 10;
+    border-radius: 3%;
+    padding: 3rem 2rem;
+    transition: .4s;
+
+    .modal__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        button {
+            background-color: gray;
+            color: #fff;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 90vw;
+    }
+}
+.visible {
+    opacity: 1;
+    top: 50%;
 }

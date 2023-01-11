@@ -1,10 +1,13 @@
+a{
+    text-decoration: none;
+}
 header {
-    background: rgba(0, 0, 0, 0.397);
+    background: rgba(0, 0, 0, 0.068);
     padding: 1rem 4rem;
     position: fixed;
     width: 100vw;
     z-index: 5;
-    height: 90px;
+    height: 80px;
     backdrop-filter: blur(10px); 
     box-shadow: 0 0 20px black;
 }
@@ -29,12 +32,12 @@ header {
             z-index: 3;
         }
         button {
-            display: none !important;
+            display: none;
         }
     }
 }
 
-.logo {
+svg.logo {
     color: rgba(0,212,255,1);
     font-size: 60px;
     cursor: pointer;
@@ -87,7 +90,7 @@ header {
         ul {
             padding: 0;
             position: absolute;
-            background-color: rgba(90, 89, 89, 0.932);
+            background-color: rgba(0, 0, 0, 0.89);
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -100,16 +103,24 @@ header {
             z-index: 2;
 
             li {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
         }
+    @media screen and (max-width:600px) {
+        ul {
+            li {
+                font-size: 1.2rem;
+            }
+
+        }
+    }
     }
 }
 ul.active{
     right: 0;
 }
 
-button {
+.btn-to-contact {
     background-color: transparent;
     color: white;
     border: 1px solid white;
@@ -117,7 +128,7 @@ button {
     border-radius: 6px;
 }
 
-button:hover {
+.btn-to-contact:hover {
     background-color: white;
     color: black;
     transition: .4s;

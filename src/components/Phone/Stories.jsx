@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import "./stories.scss"
-import { imgs } from "./storiesValues"
+import { imgs,text } from "./storiesValues"
 import { BsArrowLeft, BsArrowRight} from "react-icons/bs"
 
 
@@ -37,6 +37,11 @@ const Stories = () => {
         </div>
         <div className='storie__img'>
             <img src={imgs[cc]} alt="" />
+        </div>
+        <div className="news">
+            <h4>{text[cc].title}</h4>
+            <p>{text[cc].description1}</p>
+            <p>{text[cc].description2}</p>
         </div>
     </div>
   )

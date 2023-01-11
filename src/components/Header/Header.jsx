@@ -51,7 +51,7 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
-            <button>+Submit</button>
+            <a className='btn-to-contact' href="#contato">Contatos</a>
             <div className='header__bars-div' onClick={handleActiveBar}>{!menuBarActive ? <FaBars/> : <MdClose/>}</div>
         </div>
     </header>

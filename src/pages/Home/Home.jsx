@@ -7,6 +7,7 @@ import Typical from 'react-typical'
 import Button from '../../components/Button/Button'
 import * as C from "./homeStyles"
 import { cardsArray } from "./cardValues"
+import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
   const content = <>
@@ -22,7 +23,8 @@ const Home = () => {
     <div>
         <Header/>
         <Container phone bg="video" src={galaxia} content={content}/>
-        <Cards cards={cardsArray} isAnimation/>
+        <Cards cardsArray={cardsArray} isAnimation/>
+        <Footer/>
         
     </div>
   )

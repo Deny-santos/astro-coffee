@@ -6,7 +6,7 @@
     width: 100%;
     gap: 50%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 90px;
     
     div {
@@ -20,6 +20,8 @@
         justify-content: center;
         align-items: center;
         transition: .4s;
+        z-index: 8;
+        margin-bottom: 3rem;
 
         &:hover{
             background-color: transparent;
@@ -46,6 +48,24 @@
     width: 100%;
     align-items: center;justify-content: center;
     position: relative;
+
+    .news {
+        background-color: rgba(0, 0, 0, 0.39);
+        height: 100%;
+        width: 100%;
+        z-index: 7;
+        position: absolute;
+        padding: 1rem .5rem;
+
+        h4 {
+            color: white;
+            text-align: center;
+        }
+        p {
+            color: white;
+            
+        }
+    }
 }
 
 .storie__img{
@@ -56,4 +76,5 @@
         width: 100%;
         height: 100%;
     }
+    
 }
