@@ -11,7 +11,7 @@ import { IoMdSquare } from "react-icons/io"
 
 
 
-const Phone = () => {
+const Phone = ({}) => {
   return (
     <>
         <C.Mobile>

@@ -4,8 +4,6 @@ import { MyButton } from './buttonStyle'
 
 const Button = ({target, text}) => {
 
-  const [activeModal, setActiveModal] = useState(false)
-
 
   return (
     <>

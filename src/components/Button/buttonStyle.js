@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const MyButton = styled.a`
     color: black;
+    display: flex;
+    flex: 0 0;
     text-decoration: none;
     font-weight: 400;
     font-size: 22px;
@@ -17,5 +19,11 @@ export const MyButton = styled.a`
     &:hover {
         color: white;
         background-color: transparent;
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: 19px;
+        padding: .5rem 1rem;
+
     }
 ` 

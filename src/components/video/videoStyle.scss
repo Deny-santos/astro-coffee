@@ -1,0 +1,15 @@
+.video__container {
+    position: absolute;
+    top: 75%;
+    right: 16rem;
+    max-width: 200px;
+    z-index: 2;
+
+    video {
+        border-radius: 20px;
+    }
+
+    @media screen and (max-width:900px) {
+        display: none;
+    }
+}

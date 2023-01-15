@@ -1,10 +1,37 @@
 import styled from "styled-components";
 
-export const videoContainer = styled.div`
+export const videoContainer = styled.section`
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
     overflow: hidden;
+
+    @media screen and (max-width:1024px) {
+        video {
+            margin-left: -700px;
+        }
+        
+    }
+`
+
+export const ImageContainer = styled.section`
+    max-width: 100vh;
+    width: 100vw;
+    background-color: tomato;
+    
+   
+
+    img {
+        display: block;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    @media screen and (max-width:1024px) {
+        img{
+            margin-left: -700px;
+        }
+    }
 `
 
 export const DivOpacity  = styled.div`
@@ -33,7 +60,7 @@ export const Content = styled.div`
     }
     p {
         font-size: 22px;
-        color: gray;
+        color: rgb(226, 223, 223);
         font-weight: 400;
         &:nth-child(3){
             margin-bottom: 3rem;

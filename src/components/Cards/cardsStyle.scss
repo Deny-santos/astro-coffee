@@ -1,6 +1,6 @@
 .cards__container {
     min-height: 100vh;
-    max-width: max-content;
+    max-height: max-content;
     box-sizing: border-box;
     position: relative;
     background: rgb(2,0,36);
@@ -14,7 +14,7 @@
 
     h4{
         color: gray;
-        margin-top: 3rem;
+        margin-top: 6rem;
  
     }
     h2 {
@@ -112,7 +112,7 @@
 }
 
 .cards-item{
-    
+    margin-top: 3rem;
     width: 30%;
     max-width: 50%;
     height: 80%;
@@ -127,12 +127,12 @@
     padding-bottom: 1rem;
     
     @media screen and (max-width: 900px) {
-        min-width: 100%;
+        min-width: 80%;
         height: 100%;
     }
 
     @media screen and (max-width: 500px) {
-        width: 100%;
+        min-width: 100%;
     }
     img{
         max-width: 100%;
@@ -194,8 +194,18 @@
         justify-content: space-evenly;
 
         button {
-            background-color: gray;
+            background-color: rgb(151, 41, 41);
             color: #fff;
+            padding: .7rem 2rem;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: .4s;
+            
+            &:hover{
+                background-color: transparent;
+                border-color: black;
+                color: black;
+            }
         }
     }
 

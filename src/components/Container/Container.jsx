@@ -13,7 +13,10 @@ const Container = ({ phone, bg , src, content}) => {
                     <video loop autoPlay muted>
                         <source src={src} />
                     </video>
-                </C.videoContainer> : ""
+                </C.videoContainer> : 
+                <C.ImageContainer>
+                    <img src={src} alt="" />
+                </C.ImageContainer>
             }
             <C.DivOpacity>
             {content && (

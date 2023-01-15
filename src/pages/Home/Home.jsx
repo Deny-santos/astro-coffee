@@ -6,7 +6,7 @@ import Cards from '../../components/Cards/Cards'
 import Typical from 'react-typical'
 import Button from '../../components/Button/Button'
 import * as C from "./homeStyles"
-import { cardsArray } from "./cardValues"
+import { cardsArray, titles } from "./cardValues"
 import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
@@ -19,11 +19,13 @@ const Home = () => {
     <Button target="#home" text="Explorar Mais" />
   </>
 
+
+
   return (
     <div>
         <Header/>
         <Container phone bg="video" src={galaxia} content={content}/>
-        <Cards cardsArray={cardsArray} isAnimation/>
+        <Cards cardsArray={cardsArray} isAnimation id="home" titles={titles}/>
         <Footer/>
         
     </div>

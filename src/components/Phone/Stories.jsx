@@ -5,7 +5,6 @@ import { BsArrowLeft, BsArrowRight} from "react-icons/bs"
 
 
 const Stories = () => {
-    const [isimgActive, setIsimgActive] = useState(false)
     const [activeImg, setActiveImg] = useState(0)
     let cc = activeImg
     const handlePreviu= () => { 

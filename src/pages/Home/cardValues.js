@@ -19,3 +19,5 @@ const cards = {
 }
 
 export const cardsArray = [cards.card1, cards.card2, cards.card3]
+
+export const titles = {h4: "Qual Seu Telescópio Favorito?", h2: "Conheça o Top 3"}

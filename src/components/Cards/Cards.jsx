@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {GiBurningMeteor, GiMineExplosion} from "react-icons/gi"
 import "./cardsStyle.scss"
 
-const Cards = ({cardsArray, isAnimation}) => {
+const Cards = ({cardsArray, isAnimation, id, titles}) => {
 
   const [modalActive0, setModalActive0] = useState(false)
   const [modalActive1, setModalActive1] = useState(false)
@@ -33,7 +33,7 @@ const Cards = ({cardsArray, isAnimation}) => {
   }
 
   return (
-    <section id='home' className='cards__container' >
+    <section id={id} className='cards__container' >
       {isAnimation && (
         <>
           <GiBurningMeteor className='Cards__metor-icon'/>
@@ -41,8 +41,8 @@ const Cards = ({cardsArray, isAnimation}) => {
         </>
       )}
       <div className='cards__container-title'>
-          <h4>Qual Seu Telescópio Favorito?</h4>
-          <h2>Conheça o Top 3</h2>
+          <h4>{titles.h4}</h4>
+          <h2>{titles.h2}</h2>
       </div>
       <div className='cards__container-cards'>
           <div className="cards-item">
@@ -70,7 +70,7 @@ const Cards = ({cardsArray, isAnimation}) => {
             <div className={modalActive0 ? "myModal visible" : "myModal"}>
               <div className="modal__title">
               <h3>{cardsArray[0].title}</h3>
-              <button onClick={() => handleDesactiveModal(1)}>Fechar</button>
+              <button onClick={() => handleDesactiveModal(0)}>Fechar</button>
             </div>
             <hr />
              <div>{cardsArray[0].description}</div>
