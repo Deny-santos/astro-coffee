@@ -1,0 +1,47 @@
+.faded{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    width: 100vw;
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+.myModal {
+    z-index: 20;
+    background-color: white;
+    height: 70%;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 10;
+    border-radius: 3%;
+    padding: 3rem 2rem;
+    transition: .4s;
+
+    .modal__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        button {
+            background-color: rgb(151, 41, 41);
+            color: #fff;
+            padding: .7rem 2rem;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: .4s;
+            
+            &:hover{
+                background-color: transparent;
+                border-color: black;
+                color: black;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 90vw;
+    }
+}

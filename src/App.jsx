@@ -13,7 +13,6 @@ function App() {
           <Route path="/historia" element={<Historia/>}/>
         </Routes>
       </Router>
-     
     </>
   )
 }
